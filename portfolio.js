@@ -1,8 +1,3 @@
-// Do you want me to make a reusable project-card template where you just 
-// add project details (title, description, link) in JS and it automatically 
-// generates all project cards? That way you don’t have to manually write HTML for each project.
-// Get the Projects nav link and section
-
 document.addEventListener("DOMContentLoaded", () => {
   const homeLink = document.getElementById("homeLink");
   const educationLink = document.getElementById("educationLink");
@@ -29,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   homeSection.style.display = "block";
 
   homeLink.addEventListener("click", (e) => {
-    e.preventDefault();
+    e.preventDefault(); // stops page refresh
     hideAllSections();
     homeSection.style.display = "block";
     homeSection.scrollIntoView({behavior:"smooth"});
