@@ -60,9 +60,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- Optional: Reusable Project Cards ---
   const projectsData = [
-    {title:"Project 1", desc:"This is project 1 description.", link:"#"},
-    {title:"Project 2", desc:"This is project 2 description.", link:"#"},
-    {title:"Project 3", desc:"This is project 3 description.", link:"#"}
+    {title:"Portfolio Website", desc:"My personal portfolio using HTML, CSS & JS.", link:"#"},
+    {title:"Calculator App", desc:"A simple calculator built with JavaScript.", link:"../5. Calculator/index.html"},
+    {title:"SimonPlay_Game", desc:"A fun memory game that challenges players to repeat the correct sequence of keys.", link:"../2. SimonPlay_Game/index.html"},
+    {title:"Todo List", desc:"Task management app using HTML, CSS & JS.", link:"../6. To-Do list/index.html"},
+    {title:"Weather App", desc:"Shows weather info using API & JS.", link:"#"},
+    {title:"Blog Page", desc:"Responsive blog template built with HTML & CSS.", link:"#"},
+    {title:"Spotify", desc:"Simple Spotify websiteUsing HTML and CSS.", link:"../4. Spotify/index.html"},
+    {title:"Digital Watch", desc:"An attractive, vibrant clock with a modern design.", link:"../3. Digital_Clock/index.html"},
   ];
 
   const projectsContainer = document.getElementById("projectsContainer");
@@ -75,28 +80,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-
-// ==================================================================
-// Project
-// Inside DOMContentLoaded function
-const projectsData = [
-  {title:"Portfolio Website", desc:"My personal portfolio using HTML, CSS & JS.", link:"#"},
-  {title:"Calculator App", desc:"A simple calculator built with JavaScript.", link:"#"},
-  {title:"Todo List", desc:"Task management app using HTML, CSS & JS.", link:"#"},
-  {title:"Weather App", desc:"Shows weather info using API & JS.", link:"#"},
-  {title:"Blog Page", desc:"Responsive blog template built with HTML & CSS.", link:"#"}
-];
-
-const projectsContainer = document.getElementById("projectsContainer");
-
-projectsData.forEach(proj => {
-  const card = document.createElement("div");
-  card.className = "project-card";
-  card.innerHTML = `
-    <h3>${proj.title}</h3>
-    <p>${proj.desc}</p>
-    <a href="${proj.link}" target="_blank">View Project</a>
-  `;
-  projectsContainer.appendChild(card);
-});
+// ================================================
+// Function to make Navigation bar resposive
+function toggleMenu() {
+  const menu = document.querySelector(".nav-right");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+//=================================================
