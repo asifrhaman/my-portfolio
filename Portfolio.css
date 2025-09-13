@@ -20,7 +20,7 @@ h1, h2, h3 {
   color: #d15e11;
 }
 
-/* Navigation bar */
+/* --------------------------------- Navigation bar --------------------------------- */
 nav {
   position: sticky;
   top: 0;
@@ -66,61 +66,65 @@ nav {
 .hamburger{
   display: block;
 }
+#aboveName{
+  padding: 0px;
+}
 }
 
-/* My Introduction section */
-#me{
+/* -------------------------------- My Introduction section ---------------------- */
+#me {
   display: flex;
+  align-items: center;       /* vertical alignment */
+  justify-content: space-between; /* text left, image right */
+  gap: 20px;
+  flex-wrap: wrap;           /* allows wrapping on smaller screens */
 }
-#myIntro{
-  display: inline;
-  padding-right: 200px;
+
+#myIntro {
+  flex: 1;       /* text takes available space */
+  margin: 0;
+  padding: 0;
 }
-img{
-  border-radius: 40%;
-}
+
 #myPhoto {
-  position: relative;
-  top: 60px;
-  left: 280px;
-  width: 180px;
-  height: 120px;
+  flex-shrink: 0;   /* image won’t shrink */
+}
+#resume{ 
+  margin-right: 10px; 
+  border: 2px solid rgb(255, 157, 0); 
+  padding: 10px; 
+  width: fit-content; 
+  box-shadow: 0px 4px 10px rgba(194, 252, 2, 0.4); 
+  color: white;
+  background-color: rgb(255, 157, 0); 
+} 
+#resume:hover { 
+  background-color: rgb(255, 157, 0); 
+  color: white; 
+  box-shadow: 0px 6px 15px rgba(194, 252, 2, 0.6); 
+}
+#hire{ margin-right: 10px; background-color: rgb(255, 157, 0); border: 2px solid rgb(255, 157, 0); padding: 10px; width: fit-content; box-shadow: 0px 4px 10px rgba(194, 252, 2, 0.4); }
+#myPhoto img {
+  width: 150px;
   border-radius: 50%;
   box-shadow: 1px 5px 40px rgba(234, 200, 119, 0.7);
 }
-#name{
-  margin-left: 40px;
-}
-a{
+a {
   text-decoration: none;
-  color: white;
 }
-#hireResume{
-  display:flex;
-  padding-left:50px ;
-}
-#hire{
-  margin-right: 10px;
-  background-color: rgb(255, 157, 0);
-  border: 2px solid rgb(255, 157, 0); 
-  padding: 10px;          
-  width: fit-content;
-  box-shadow: 0px 4px 10px rgba(194, 252, 2, 0.4);
-}
-#resume{
-  margin-right: 10px;
-  border: 2px solid rgb(255, 157, 0); 
-  padding: 10px;          
-  width: fit-content;
-  box-shadow: 0px 4px 10px rgba(194, 252, 2, 0.4);
-}
-#resume:hover {
-  background-color: rgb(255, 157, 0);
-  color: white;
-  box-shadow: 0px 6px 15px rgba(194, 252, 2, 0.6);
-}
+/*--------Resp--*/
+@media (max-width: 768px) {
+  #me {
+    flex-direction: column;  /* stack text and image */
+    align-items: center;     /* center content */
+    text-align: center;
+  }
 
-/* Skill section */
+  #myPhoto img {
+    width: 120px;   /* smaller size for phones */
+  }
+}
+/*----------------------------------- Skill section ---------------------------- */
 #showSkill{
   padding-left: 130px;
   display: flex;
@@ -129,9 +133,17 @@ a{
   box-shadow: 5px 5px 100px rgba(239, 255, 14, 0.7);
 }
 #showSkill p{
-  padding-left: 200px;
+  padding-left: 160px;
 }
-/* =================================== About Me ================================================ */
+@media (max-width: 700px){
+  #showSkill, p{
+    padding: 0%;
+    display: inline-block;
+    margin: 0.5%;
+    padding-right: 0%;
+  }
+}
+/* ------------------------------------ About Me -----------------------------------*/
 #aboutMe{
   display:flex;
   padding-left: 200px;
@@ -148,7 +160,17 @@ a{
   display: inline-block;
   width: 200px;
 }
-/* =================================== socialMedia =============================================== */
+@media(max-width:700px){
+  #aboutMe{
+    display: inline;
+    padding-left: 0rem;
+  }
+  #aboutMe, h3{
+    display: inline;
+    left: 0;
+  }
+}
+/* ------------------------------------- Social Media ------------------------------- */
 #socialMedia{
   display: inline-block;
   padding: 23px;
